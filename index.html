@@ -254,7 +254,7 @@ blockquote cite{display:block;font-style:normal;font-size:.88rem;color:var(--mut
 .hours li{display:flex;justify-content:space-between;padding:.75rem .9rem;border-radius:12px;font-weight:600}
 .hours li:nth-child(odd){background:#ffffff06}
 .hours li.today{background:var(--gold);color:#1a1405}
-.hours li.today::after{content:attr(data-now);font-size:.75rem;font-weight:800;margin-left:.5rem}
+.hours li small{font-size:.72rem;font-weight:800;margin-left:.4rem;letter-spacing:.05em}
 .hours .c{color:var(--red)}
 .hours li.today .c{color:#7a1d0d}
 .addr{margin-top:1.4rem;display:grid;gap:.7rem}
@@ -583,7 +583,7 @@ const BOC_EXT=[['Cebolla','Ceba'],['Pimiento','Pebrot'],['Queso','Formatge']];
 const PLA_EXT=MENU[2].items.slice(1,11);
 
 const REV=[
- {n:'Sergio G.',d:'hace 5 días',c:'#c0392b',k:['F','T','P'],t:'¡Un auténtico descubrimiento en Sant Andreu! Lo mejor, sin duda, es la atención de Lia y Gary. ¡Tenéis que probar sus Torreznos de Soria! Crujientes por fuera, tiernos por dentro. Destacan los mojitos, que están muuuy buenos. Y son pet friendly 🐾'},
+ {n:'Sergio G.',d:'hace 5 días',c:'#c0392b',k:['F','T','P'],t:'¡Un auténtico descubrimiento en Sant Andreu! Lo mejor, sin duda, es la atención de Lia y Gari. ¡Tenéis que probar sus Torreznos de Soria! Crujientes por fuera, tiernos por dentro. Destacan los mojitos, que están muuuy buenos. Y son pet friendly 🐾'},
  {n:'Yadila Z.',d:'hace 4 días',c:'#8e44ad',k:['T','P'],t:'¡Una experiencia maravillosa! Nos encantó todo: la comida, el ambiente y, especialmente, la atención de sus dueños, que son encantadores. Son pet friendly y reciben a nuestras mascotas con mucho cariño. 🐾❤️'},
  {n:'Jesús B.',d:'hace 3 semanas',c:'#16a085',k:['F'],t:'Comida tradicional y de calidad de producto. Unos excelentes callos con garbanzos. La sepia súper tierna y con un acompañamiento que podría ser casi un plato único. Ojalá más locales mantuviesen el espíritu de la cocina mediterránea.'},
  {n:'Luis A.',d:'hace 2 días',c:'#d35400',k:['F','T'],t:'Cinco estrellas bien merecidas. Buena atención, buena calidad de sus productos y buen precio para este nuevo espacio en el barrio. Se nota la experiencia. Torreznos de Soria deliciosos.'},
@@ -623,7 +623,7 @@ function renderStatus(){
 }
 function renderHours(){
   const t=T[L],n=madridNow(),order=[1,2,3,4,5,6,0];
-  $('#hours').innerHTML=order.map(d=>`<li class="${d===n.d?'today':''}" ${d===n.d?`data-now="· ${t.now}"`:''}><span>${t.days[d]}</span><span class="${H[d]?'':'c'}">${H[d]?hm(H[d][0])+' – '+hm(H[d][1]):t.closedDay}</span></li>`).join('');
+  $('#hours').innerHTML=order.map(d=>`<li class="${d===n.d?'today':''}"><span>${t.days[d]}${d===n.d?` <small>· ${t.now}</small>`:''}</span><span class="${H[d]?'':'c'}">${H[d]?hm(H[d][0])+' – '+hm(H[d][1]):t.closedDay}</span></li>`).join('');
 }
 
 /* ---------- carta ---------- */
