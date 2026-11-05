@@ -156,6 +156,11 @@ header{position:sticky;top:0;z-index:50;background:#121110e6;backdrop-filter:blu
 .it .p small{color:var(--muted);font-family:Figtree;font-size:.75rem;margin-left:.2rem}
 .it mark{background:#f5b81c55;color:#fff;border-radius:3px}
 .one{max-width:620px}
+.it.t2{display:grid;grid-template-columns:7px 1fr 4.4rem 4.4rem;gap:.5rem;align-items:baseline}
+.it.t2 .dots{display:none}
+.it.t2 .n{max-width:none}
+.it.t2 .p.w{width:auto}
+.hdr2 .w{width:4.4rem}
 .it .p.w,.hdr2 .w{width:4.8rem;text-align:right}
 .hdr2{display:flex;justify-content:flex-end;gap:.5rem;font-family:Oswald;color:var(--gold);font-size:.85rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.2rem}
 .allergy{margin-top:1.6rem;background:#f8e6c4;color:#2b2214;border-radius:12px;padding:.9rem 1.1rem;display:flex;gap:.8rem;align-items:center;font-size:.95rem}
@@ -349,10 +354,10 @@ footer .made a{color:var(--gold);text-decoration:none;font-weight:700}
       <article class="rac reveal"><img data-p="callos" alt="Callos con garbanzos" loading="lazy"><div class="t"><h3 data-t="n2">Callos con garbanzos</h3><p data-t="d2">En cazuela de barro, como toca.</p></div></article>
       <article class="rac reveal"><img data-p="bravas" alt="Patatas bravas" loading="lazy"><div class="t"><h3 data-t="n3">Patatas bravas</h3><p data-t="d3">Con su brava y su alioli.</p></div></article>
       <article class="rac reveal"><img data-p="sepia" alt="Sepia" loading="lazy"><div class="t"><h3 data-t="n4">Sepia a la plancha</h3><p data-t="d4">Súper tierna, con guarnición de plato único.</p></div></article>
-      <article class="rac reveal"><img data-p="jamon" alt="Jamón y aceitunas" loading="lazy"><div class="t"><h3 data-t="n5">Jamón y olivas</h3><p data-t="d5">El clásico para empezar.</p></div></article>
+      <article class="rac reveal"><img data-p="mojito2" alt="Mojito en la terraza" loading="lazy"><div class="t"><h3 data-t="n5">Mojitos de Gari</h3><p data-t="d5">«Destacan los mojitos, que están muuuy buenos».</p></div></article>
       <article class="rac reveal"><img data-p="entrana" alt="Carne a la plancha" loading="lazy"><div class="t"><h3 data-t="n6">Carne a la plancha</h3><p data-t="d6">Con patatas y ensalada completa.</p></div></article>
       <article class="rac reveal"><img data-p="tortilla" alt="Tortilla de patatas" loading="lazy"><div class="t"><h3 data-t="n7">Tortilla de patatas</h3><p data-t="d7">Jugosa, de las de casa.</p></div></article>
-      <article class="rac wide reveal"><img data-p="fingers" alt="Fritura con salsas" loading="lazy"><div class="t"><h3 data-t="n8">Gambas al ajillo, pinchos morunos y más</h3><p data-t="d8">Pregunta en barra por lo que hay hoy fuera de carta.</p></div></article>
+      <article class="rac wide reveal"><img data-p="fingers" alt="Fritura con salsas" loading="lazy"><div class="t"><h3 data-t="n8">Y lo que salga hoy de la cocina</h3><p data-t="d8">Gambas al ajillo, pinchos morunos, fritura con sus salsas… Pregunta en barra.</p></div></article>
     </div>
     <p class="note">💬 <span data-t="noteRac">Las raciones cambian según el día: pregunta a Gari en la barra o escríbenos por WhatsApp.</span></p>
   </div>
@@ -518,6 +523,7 @@ const PH={
  perro:'ANWiy9SvqO6046gImrePKZn_RxsJrBRDfnszlFNdNunkDJVAFx2TdkqPSV45DQLC8tT0_Ms70gRxcpjBbz2Vr4eycS3viaYCY97ZB28vpVsfVXkNRTOXod73wKUmP55izC4ASyKhtcRm6p5YcETB',
  entrana:'ANWiy9QjLamlxQI4SwvC8x12Xgr-DXGQa9ndj0wPCn7EeQQO-yCG_Zgm6SVYBy3_-Cr5I3O5HayEdslprltdaAdsXKlXU5KdSaFm63RKRpF86dMVDQbpymZ0pPOLijw40FQufSUJU6b17opJExF0',
  torreznos2:'ANWiy9SHBuDeQjqhYqzddvpCejip7488o5QCXXtK_GeBJkGkcA2hvRHzBCiHFotU2nVCLYwkYA2nizaaZT5L5wGKVtaMNwSE_MZ1E78y0FaRrY1LPm_rk5iu6GhFh4sZvzljIb-2x2D3sF94U5VQ',
+ mojito2:'ANWiy9TCIIzZYF5N7YyVPviDMw4Hr6jFbRYvW8t3eF4WbgHD7UoKO3_wmDKTkI1Tv4Q9qxhU2EgK8NOuj5U8ExOyrncub2gcwR5mMAbkS440uxrNTTU7qFNrtzJ6Pn1LQkRkWxqflMIfpaq0pKmm',
  tortilla:'ANWiy9SxQ7CLhDavz0mSGKwu_F8fklg3akgWPEXCRllodUhuxHd3nywAPTnLhIlmKtjdPlSoWqNVTxj5rkcBdBwuD4PNRVtK5sOzs5-u0727aQszvQX4iMWPg4txX1Rj0jGi0YaW93BODuHK6BR9'
 };
 document.querySelectorAll('img[data-p]').forEach(i=>{const w=i.closest('.rac.wide,.pets,.facade')?1400:900;i.src=G+PH[i.dataset.p]+'=w'+w+'-h'+w+'-k-no';});
@@ -527,7 +533,7 @@ const T={
 es:{nav1:'Lo de la casa',nav2:'Carta',nav3:'Monta tu bocata',nav4:'Lia y Gari',nav5:'Opiniones',nav6:'Visítanos',
 heroSub:'Bocatas, tapas y buen rollo en el corazón de Sant Andreu.',ctaCarta:'Ver la carta',ctaPide:'Encarga para llevar',bG:'en Google · 23 reseñas',bT:'Terraza',bB:'Bocatas desde 4 €',polPlato:'Plato de la casa',
 k1:'Para picar y compartir',t1:'Lo de la casa',l1:'Cocina de siempre hecha por Lia: raciones generosas, producto bueno y precios de barrio. Esto es lo que más se pide.',tagTop:'El más pedido',
-d1:'Crujientes por fuera, tiernos por dentro. «De los mejores que he probado».',n2:'Callos con garbanzos',d2:'En cazuela de barro, como toca.',n3:'Patatas bravas',d3:'Con su brava y su alioli.',n4:'Sepia a la plancha',d4:'Súper tierna, con guarnición de plato único.',n5:'Jamón y olivas',d5:'El clásico para empezar.',n6:'Carne a la plancha',d6:'Con patatas y ensalada completa.',n7:'Tortilla de patatas',d7:'Jugosa, de las de casa.',n8:'Gambas al ajillo, pinchos morunos y más',d8:'Pregunta en barra por lo que hay hoy fuera de carta.',
+d1:'Crujientes por fuera, tiernos por dentro. «De los mejores que he probado».',n2:'Callos con garbanzos',d2:'En cazuela de barro, como toca.',n3:'Patatas bravas',d3:'Con su brava y su alioli.',n4:'Sepia a la plancha',d4:'Súper tierna, con guarnición de plato único.',n5:'Mojitos de Gari',d5:'«Destacan los mojitos, que están muuuy buenos».',n6:'Carne a la plancha',d6:'Con patatas y ensalada completa.',n7:'Tortilla de patatas',d7:'Jugosa, de las de casa.',n8:'Y lo que salga hoy de la cocina',d8:'Gambas al ajillo, pinchos morunos, fritura con sus salsas… Pregunta en barra.',
 noteRac:'Las raciones cambian según el día: pregunta a Gari en la barra o escríbenos por WhatsApp.',
 k2:'Desayunos, bocatas y bebidas',t2:'La carta',l2:'La pizarra del bar, ahora en tu móvil. Busca lo que te apetece o navega por secciones.',ph:'Busca: lomo, caña, carajillo…',empty:'No encontramos nada con eso. ¡Pregunta en barra!',alT:'Sobre alergias e intolerancias',alD:'Si tienes alguna alergia o intolerancia, consulta con nuestro personal. Te informamos encantados de los ingredientes de cada plato.',
 k3:'Para llevar o para la mesa',t3:'Monta tu bocata',l3:'Elige, añade extras y mira el precio al momento. Si es para llevar, mándanoslo por WhatsApp y te lo tenemos listo.',mBoc:'🥖 Bocata',mPla:'🍳 Plato combinado',s1:'Elige tu bocata',frios:'Fríos',calientes:'Calientes',s2:'Extras (+1 € cada uno)',s1p:'La base',base:'Dos huevos con patatas',s2p:'Añade lo que quieras',s3:'¿Cuántos y para cuándo?',waBtn:'Encargar por WhatsApp',fine:'Pagas al recoger. Precios de la carta del bar.',
@@ -544,7 +550,7 @@ mq:['Torreznos de Soria','Mojitos','Bocatas desde 4 €','Esmorzars desde las 8:
 ca:{nav1:'El de la casa',nav2:'Carta',nav3:'Munta el teu entrepà',nav4:'La Lia i en Gari',nav5:'Opinions',nav6:'Visita\'ns',
 heroSub:'Entrepans, tapes i bon rotllo al cor de Sant Andreu.',ctaCarta:'Veure la carta',ctaPide:'Encarrega per emportar',bG:'a Google · 23 ressenyes',bT:'Terrassa',bB:'Entrepans des de 4 €',polPlato:'Plat de la casa',
 k1:'Per picar i compartir',t1:'El de la casa',l1:'Cuina de sempre feta per la Lia: racions generoses, bon producte i preus de barri. Això és el que més es demana.',tagTop:'El més demanat',
-d1:'Cruixents per fora, tendres per dins. «Dels millors que he provat».',n2:'Tripa amb cigrons',d2:'En cassola de fang, com ha de ser.',n3:'Patates braves',d3:'Amb la seva brava i el seu allioli.',n4:'Sípia a la planxa',d4:'Supertendra, amb guarnició de plat únic.',n5:'Pernil i olives',d5:'El clàssic per començar.',n6:'Carn a la planxa',d6:'Amb patates i amanida completa.',n7:'Truita de patates',d7:'Sucosa, de les de casa.',n8:'Gambes a l\'all, pinxos morunos i més',d8:'Pregunta a la barra què hi ha avui fora de carta.',
+d1:'Cruixents per fora, tendres per dins. «Dels millors que he provat».',n2:'Tripa amb cigrons',d2:'En cassola de fang, com ha de ser.',n3:'Patates braves',d3:'Amb la seva brava i el seu allioli.',n4:'Sípia a la planxa',d4:'Supertendra, amb guarnició de plat únic.',n5:'Mojitos d\'en Gari',d5:'«Els mojitos estan boníssims».',n6:'Carn a la planxa',d6:'Amb patates i amanida completa.',n7:'Truita de patates',d7:'Sucosa, de les de casa.',n8:'I el que surti avui de la cuina',d8:'Gambes a l\'all, pinxos morunos, fregit amb les seves salses… Pregunta a la barra.',
 noteRac:'Les racions canvien segons el dia: pregunta al Gari a la barra o escriu-nos per WhatsApp.',
 k2:'Esmorzars, entrepans i begudes',t2:'La carta',l2:'La pissarra del bar, ara al teu mòbil. Busca el que et vingui de gust o navega per seccions.',ph:'Busca: llom, canya, cigaló…',empty:'No hem trobat res. Pregunta a la barra!',alT:'Sobre al·lèrgies i intoleràncies',alD:'Si tens alguna al·lèrgia o intolerància, consulta-ho amb el nostre personal. T\'informarem encantats dels ingredients de cada plat.',
 k3:'Per emportar o per a la taula',t3:'Munta el teu entrepà',l3:'Tria, afegeix extres i mira el preu al moment. Si és per emportar, envia-ho per WhatsApp i te\'l tindrem a punt.',mBoc:'🥖 Entrepà',mPla:'🍳 Plat combinat',s1:'Tria el teu entrepà',frios:'Freds',calientes:'Calents',s2:'Extres (+1 € cadascun)',s1p:'La base',base:'Dos ous amb patates',s2p:'Afegeix el que vulguis',s3:'Quants i per a quan?',waBtn:'Encarregar per WhatsApp',fine:'Pagues en recollir. Preus de la carta del bar.',
@@ -638,7 +644,7 @@ function renderMenu(){
     const rows=items.map(it=>{
       const nm=hl(L==='es'?it[0]:it[1]);
       const pr=c.two?`<span class="p w">${eur(it[2])}</span><span class="p w">${it[3]?eur(it[3]):'—'}</span>`:`<span class="p">${eur(it[2])}</span>`;
-      return `<div class="it"><span class="n">${nm}</span><span class="dots"></span>${pr}</div>`;
+      return `<div class="it${c.two?' t2':''}"><span class="n">${nm}</span><span class="dots"></span>${pr}</div>`;
     });
     if(c.two){
       const hd=`<div class="hdr2"><span class="w">${L==='es'?c.two[0]:c.two[2]}</span><span class="w">${L==='es'?c.two[1]:c.two[3]}</span></div>`;
